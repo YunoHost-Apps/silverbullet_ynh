@@ -35,7 +35,7 @@ ram.runtime = "250M"
     # this is a generic question - ask strings are automatically handled by YunoHost's core
     type = "domain"
 
-    [install.init_main_permission]
+    [install.admin]
     help.en = "Choose the user who can access to silverbullet"
     help.fr = "Choisissez l'utilisateur pouvant accéder à silverbullet"
     type = "user"
@@ -57,10 +57,10 @@ ram.runtime = "250M"
     [resources.install_dir]
 
     [resources.data_dir]
+    subdirs = [ "notes" ]
 
     [resources.permissions]
     main.url = "/"
-    main.permissions = "visitors" # The app is protected by a user/password prompt
 
     [resources.ports]
     main.default = 3000

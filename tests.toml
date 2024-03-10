@@ -4,9 +4,6 @@ test_format = 1.0
 
 [default]
 
-    exclude = ["install.subdir"]
-    args.init_main_permission = "package_checker"
-
     # -------------------------------
     # Commits to test upgrade from
     # -------------------------------

@@ -40,9 +40,6 @@ ynh_add_config --template="custom.env" --destination="$data_dir/custom.env"
 chmod 600 "$data_dir/custom.env"
 chown "$app:$app" "$data_dir/custom.env"
 
-# Create notes subdir
-install -d -m 700 -o $app -g $app $data_dir/notes
-
 #=================================================
 # REAPPLY SYSTEM CONFIGURATIONS
 #=================================================
