@@ -41,6 +41,8 @@ systemctl enable "$app.service" --quiet
 
 yunohost service add "$app" --description="The hacker's notebook"
 
+ynh_permission_update --permission="main" --add="$admin"
+
 #=================================================
 # RELOAD NGINX AND PHP-FPM OR THE APP SERVICE
 #=================================================
