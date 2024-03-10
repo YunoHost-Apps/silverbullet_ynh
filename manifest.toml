@@ -19,12 +19,12 @@ code = "https://github.com/silverbulletmd/silverbullet"
 
 [integration]
 yunohost = ">= 11.2"
-architectures = "amd64"
+architectures = [ "amd64" ]
 multi_instance = true
 
-ldap = "false"
+ldap = false
 
-sso = "false"
+sso = false
 
 disk = "100M"
 ram.build = "50M"
