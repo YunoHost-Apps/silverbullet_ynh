@@ -19,37 +19,26 @@ code = "https://github.com/silverbulletmd/silverbullet"
 
 [integration]
 yunohost = ">= 11.2"
-architectures = "amd64"
+architectures = [ "amd64" ]
 multi_instance = true
 
-ldap = "false"
+ldap = false
 
-sso = "false"
+sso = false
 
-disk = "50M"
+disk = "100M"
 ram.build = "50M"
-ram.runtime = "50M"
+ram.runtime = "250M"
 
 [install]
     [install.domain]
     # this is a generic question - ask strings are automatically handled by YunoHost's core
     type = "domain"
 
-    [install.path]
-    # this is a generic question - ask strings are automatically handled by YunoHost's core
-    type = "path"
-    default = "/example"
-
-    [install.user]
-    # this is a generic question - ask strings are automatically handled by YunoHost's core
-    help.en = "Choose the who can access to silverbullet"
+    [install.admin]
+    help.en = "Choose the user who can access to silverbullet"
     help.fr = "Choisissez l'utilisateur pouvant accéder à silverbullet"
     type = "user"
-
-    [install.password]
-    help.en = "Choose a password used to access to silverbullet?"
-    help.fr = "Choisissez le mot de passe pour accéder à silverbullet"
-    type = "password"
 
 [resources]
     # See the packaging documentation for the full set
@@ -58,6 +47,7 @@ ram.runtime = "50M"
     [resources.sources]
 
     [resources.sources.main]
+    in_subdir=false
     url = "https://github.com/silverbulletmd/silverbullet/releases/download/0.7.5/silverbullet-server-linux-x86_64.zip"
     sha256 = "cdacbeff4fc92fa936650f3536bb89cb4d5ab0871d7c19f29a6145e74202a4d9"
     autoupdate.strategy = "latest_github_release"
@@ -67,9 +57,10 @@ ram.runtime = "50M"
     [resources.install_dir]
 
     [resources.data_dir]
+    subdirs = [ "notes" ]
 
     [resources.permissions]
     main.url = "/"
-    main.permissions = "visitors" # The app is protected by a user/password prompt
 
     [resources.ports]
+    main.default = 3000
