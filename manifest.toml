@@ -48,9 +48,10 @@ ram.runtime = "250M"
 
     [resources.sources.main]
     in_subdir=false
-    url = "https://github.com/silverbulletmd/silverbullet/archive/refs/tags/0.7.6.tar.gz"
-    sha256 = "e98bda59a053490bf8b957118ac0ed4d49f8a88c8803f2df0513744e12ee65e5"
+    url = "https://github.com/silverbulletmd/silverbullet/releases/download/0.7.6/silverbullet-server-linux-x86_64.zip"
+    sha256 = "4913afc68d37bcbc91d18e46704e5a696ce4794669e4def448a594b2b0d7318f"
     autoupdate.strategy = "latest_github_release"
+    autoupdate.asset = "^silverbullet-server-linux-x86_64.zip$"
 
     [resources.system_user]
 
