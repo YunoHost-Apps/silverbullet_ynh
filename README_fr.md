@@ -36,7 +36,7 @@ SilverBullet...
 - **Auto-hébergé** : vous êtes propriétaire de vos données. Tout le contenu est stocké sous forme de fichiers simples dans un dossier sur le disque. Sauvegardez, synchronisez, éditez, publiez, écrivez avec tous les outils supplémentaires que vous souhaitez.
 - SilverBullet est [open-source, sous licence MIT](https://github.com/silverbulletmd/silverbullet)
 
-**Version incluse :** 0.7.5~ynh1
+**Version incluse :** 0.7.6~ynh1
 
 **Démo :** <https://play.silverbullet.md/>
 
