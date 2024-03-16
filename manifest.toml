@@ -7,7 +7,7 @@ name = "SilverBullet"
 description.en = "a creative space where you collect, create and expand your personal knowledge"
 description.fr = "un espace créatif où vous recueillez, créez et élargissez vos connaissances personnelles"
 
-version = "0.7.5~ynh1"
+version = "0.7.6~ynh1"
 
 maintainers = ["fflorent"]
 
@@ -48,8 +48,8 @@ ram.runtime = "250M"
 
     [resources.sources.main]
     in_subdir=false
-    url = "https://github.com/silverbulletmd/silverbullet/releases/download/0.7.5/silverbullet-server-linux-x86_64.zip"
-    sha256 = "cdacbeff4fc92fa936650f3536bb89cb4d5ab0871d7c19f29a6145e74202a4d9"
+    url = "https://github.com/silverbulletmd/silverbullet/archive/refs/tags/0.7.6.tar.gz"
+    sha256 = "e98bda59a053490bf8b957118ac0ed4d49f8a88c8803f2df0513744e12ee65e5"
     autoupdate.strategy = "latest_github_release"
 
     [resources.system_user]
