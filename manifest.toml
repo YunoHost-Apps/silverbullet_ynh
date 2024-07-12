@@ -19,7 +19,7 @@ code = "https://github.com/silverbulletmd/silverbullet"
 
 [integration]
 yunohost = ">= 11.2"
-architectures = [ "amd64" ]
+architectures = [ "amd64", "arm64" ]
 multi_instance = true
 
 ldap = false
@@ -48,10 +48,13 @@ ram.runtime = "250M"
 
     [resources.sources.main]
     in_subdir=false
-    url = "https://github.com/silverbulletmd/silverbullet/releases/download/0.8.1/silverbullet-server-linux-x86_64.zip"
-    sha256 = "84a27dc7ec09183b67da58a9cbe783d17747029b031c980135e40cabe7392971"
+    amd64.url = "https://github.com/silverbulletmd/silverbullet/releases/download/0.8.1/silverbullet-server-linux-x86_64.zip"
+    amd64.sha256 = "84a27dc7ec09183b67da58a9cbe783d17747029b031c980135e40cabe7392971"
+    arm64.url = "https://github.com/silverbulletmd/silverbullet/releases/download/0.8.1/silverbullet-server-linux-aarch64.zip"
+    arm64.sha256 = "5dc73df55535bbb2f27a93e63483abf32e14a547b5df9435d49b7db8d37d5047"
     autoupdate.strategy = "latest_github_release"
-    autoupdate.asset = "^silverbullet-server-linux-x86_64.zip$"
+    autoupdate.asset.amd64 = "^silverbullet-server-linux-x86_64.zip$"
+    autoupdate.asset.arm64 = "^silverbullet-server-linux-aarch64.zip$"
 
     [resources.system_user]
 
