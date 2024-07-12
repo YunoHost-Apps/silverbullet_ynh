@@ -5,7 +5,7 @@ NON debe editarse manualmente.
 
 # SilverBullet para YunoHost
 
-[![Nivel de integración](https://dash.yunohost.org/integration/silverbullet.svg)](https://dash.yunohost.org/appci/app/silverbullet) ![Estado de funcionamento](https://ci-apps.yunohost.org/ci/badges/silverbullet.status.svg) ![Estado de mantemento](https://ci-apps.yunohost.org/ci/badges/silverbullet.maintain.svg)
+[![Nivel de integración](https://dash.yunohost.org/integration/silverbullet.svg)](https://ci-apps.yunohost.org/ci/apps/silverbullet/) ![Estado de funcionamento](https://ci-apps.yunohost.org/ci/badges/silverbullet.status.svg) ![Estado de mantemento](https://ci-apps.yunohost.org/ci/badges/silverbullet.maintain.svg)
 
 [![Instalar SilverBullet con YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=silverbullet)
 
@@ -37,7 +37,7 @@ SilverBullet...
 - SilverBullet is [open source, MIT licensed](https://github.com/silverbulletmd/silverbullet) software.
 
 
-**Versión proporcionada:** 0.7.7~ynh1
+**Versión proporcionada:** 0.8.1~ynh1
 
 **Demo:** <https://play.silverbullet.md/>
 
