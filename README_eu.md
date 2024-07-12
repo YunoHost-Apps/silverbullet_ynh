@@ -5,7 +5,7 @@ EZ editatu eskuz.
 
 # SilverBullet YunoHost-erako
 
-[![Integrazio maila](https://dash.yunohost.org/integration/silverbullet.svg)](https://dash.yunohost.org/appci/app/silverbullet) ![Funtzionamendu egoera](https://ci-apps.yunohost.org/ci/badges/silverbullet.status.svg) ![Mantentze egoera](https://ci-apps.yunohost.org/ci/badges/silverbullet.maintain.svg)
+[![Integrazio maila](https://dash.yunohost.org/integration/silverbullet.svg)](https://ci-apps.yunohost.org/ci/apps/silverbullet/) ![Funtzionamendu egoera](https://ci-apps.yunohost.org/ci/badges/silverbullet.status.svg) ![Mantentze egoera](https://ci-apps.yunohost.org/ci/badges/silverbullet.maintain.svg)
 
 [![Instalatu SilverBullet YunoHost-ekin](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=silverbullet)
 
@@ -37,7 +37,7 @@ SilverBullet...
 - SilverBullet is [open source, MIT licensed](https://github.com/silverbulletmd/silverbullet) software.
 
 
-**Paketatutako bertsioa:** 0.7.7~ynh1
+**Paketatutako bertsioa:** 0.8.1~ynh1
 
 **Demoa:** <https://play.silverbullet.md/>
 
