@@ -1,20 +1,20 @@
 <!--
-Ohart ongi: README hau automatikoki sortu da <https://github.com/YunoHost/apps/tree/master/tools/readme_generator>ri esker
-EZ editatu eskuz.
+N.B.: README ini dibuat secara otomatis oleh <https://github.com/YunoHost/apps/tree/master/tools/readme_generator>
+Ini TIDAK boleh diedit dengan tangan.
 -->
 
-# SilverBullet YunoHost-erako
+# SilverBullet untuk YunoHost
 
-[![Integrazio maila](https://dash.yunohost.org/integration/silverbullet.svg)](https://ci-apps.yunohost.org/ci/apps/silverbullet/) ![Funtzionamendu egoera](https://ci-apps.yunohost.org/ci/badges/silverbullet.status.svg) ![Mantentze egoera](https://ci-apps.yunohost.org/ci/badges/silverbullet.maintain.svg)
+[![Tingkat integrasi](https://dash.yunohost.org/integration/silverbullet.svg)](https://ci-apps.yunohost.org/ci/apps/silverbullet/) ![Status kerja](https://ci-apps.yunohost.org/ci/badges/silverbullet.status.svg) ![Status pemeliharaan](https://ci-apps.yunohost.org/ci/badges/silverbullet.maintain.svg)
 
-[![Instalatu SilverBullet YunoHost-ekin](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=silverbullet)
+[![Pasang SilverBullet dengan YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=silverbullet)
 
-*[Irakurri README hau beste hizkuntzatan.](./ALL_README.md)*
+*[Baca README ini dengan bahasa yang lain.](./ALL_README.md)*
 
-> *Pakete honek SilverBullet YunoHost zerbitzari batean azkar eta zailtasunik gabe instalatzea ahalbidetzen dizu.*  
-> *YunoHost ez baduzu, kontsultatu [gida](https://yunohost.org/install) nola instalatu ikasteko.*
+> *Paket ini memperbolehkan Anda untuk memasang SilverBullet secara cepat dan mudah pada server YunoHost.*  
+> *Bila Anda tidak mempunyai YunoHost, silakan berkonsultasi dengan [panduan](https://yunohost.org/install) untuk mempelajari bagaimana untuk memasangnya.*
 
-## Aurreikuspena
+## Ringkasan
 
 SilverBullet aims to be your workshop for the mind: a creative space where you collect, create and expand your personal knowledge, while also letting you constantly evolve the tools you use to do so.
 
@@ -37,31 +37,31 @@ SilverBullet...
 - SilverBullet is [open source, MIT licensed](https://github.com/silverbulletmd/silverbullet) software.
 
 
-**Paketatutako bertsioa:** 0.8.4~ynh1
+**Versi terkirim:** 0.8.4~ynh1
 
-**Demoa:** <https://play.silverbullet.md/>
+**Demo:** <https://play.silverbullet.md/>
 
-## Pantaila-argazkiak
+## Tangkapan Layar
 
-![SilverBullet(r)en pantaila-argazkia](./doc/screenshots/silverbullet.jpg)
+![Tangkapan Layar pada SilverBullet](./doc/screenshots/silverbullet.jpg)
 
-## Dokumentazioa eta baliabideak
+## Dokumentasi dan sumber daya
 
-- Aplikazioaren webgune ofiziala: <https://silverbullet.md>
-- Jatorrizko aplikazioaren kode-gordailua: <https://github.com/silverbulletmd/silverbullet>
-- YunoHost Denda: <https://apps.yunohost.org/app/silverbullet>
-- Eman errore baten berri: <https://github.com/YunoHost-Apps/silverbullet_ynh/issues>
+- Website aplikasi resmi: <https://silverbullet.md>
+- Depot kode aplikasi hulu: <https://github.com/silverbulletmd/silverbullet>
+- Gudang YunoHost: <https://apps.yunohost.org/app/silverbullet>
+- Laporkan bug: <https://github.com/YunoHost-Apps/silverbullet_ynh/issues>
 
-## Garatzaileentzako informazioa
+## Info developer
 
-Bidali `pull request`a [`testing` abarrera](https://github.com/YunoHost-Apps/silverbullet_ynh/tree/testing).
+Silakan kirim pull request ke [`testing` branch](https://github.com/YunoHost-Apps/silverbullet_ynh/tree/testing).
 
-`testing` abarra probatzeko, ondorengoa egin:
+Untuk mencoba branch `testing`, silakan dilanjutkan seperti:
 
 ```bash
 sudo yunohost app install https://github.com/YunoHost-Apps/silverbullet_ynh/tree/testing --debug
-edo
+atau
 sudo yunohost app upgrade silverbullet -u https://github.com/YunoHost-Apps/silverbullet_ynh/tree/testing --debug
 ```
 
-**Informazio gehiago aplikazioaren paketatzeari buruz:** <https://yunohost.org/packaging_apps>
+**Info lebih lanjut mengenai pemaketan aplikasi:** <https://yunohost.org/packaging_apps>
