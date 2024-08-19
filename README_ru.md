@@ -1,20 +1,20 @@
 <!--
-注意：此 README 由 <https://github.com/YunoHost/apps/tree/master/tools/readme_generator> 自动生成
-请勿手动编辑。
+Важно: этот README был автоматически сгенерирован <https://github.com/YunoHost/apps/tree/master/tools/readme_generator>
+Он НЕ ДОЛЖЕН редактироваться вручную.
 -->
 
-# YunoHost 上的 SilverBullet
+# SilverBullet для YunoHost
 
-[![集成程度](https://dash.yunohost.org/integration/silverbullet.svg)](https://ci-apps.yunohost.org/ci/apps/silverbullet/) ![工作状态](https://ci-apps.yunohost.org/ci/badges/silverbullet.status.svg) ![维护状态](https://ci-apps.yunohost.org/ci/badges/silverbullet.maintain.svg)
+[![Уровень интеграции](https://dash.yunohost.org/integration/silverbullet.svg)](https://ci-apps.yunohost.org/ci/apps/silverbullet/) ![Состояние работы](https://ci-apps.yunohost.org/ci/badges/silverbullet.status.svg) ![Состояние сопровождения](https://ci-apps.yunohost.org/ci/badges/silverbullet.maintain.svg)
 
-[![使用 YunoHost 安装 SilverBullet](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=silverbullet)
+[![Установите SilverBullet с YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=silverbullet)
 
-*[阅读此 README 的其它语言版本。](./ALL_README.md)*
+*[Прочтите этот README на других языках.](./ALL_README.md)*
 
-> *通过此软件包，您可以在 YunoHost 服务器上快速、简单地安装 SilverBullet。*  
-> *如果您还没有 YunoHost，请参阅[指南](https://yunohost.org/install)了解如何安装它。*
+> *Этот пакет позволяет Вам установить SilverBullet быстро и просто на YunoHost-сервер.*  
+> *Если у Вас нет YunoHost, пожалуйста, посмотрите [инструкцию](https://yunohost.org/install), чтобы узнать, как установить его.*
 
-## 概况
+## Обзор
 
 SilverBullet aims to be your workshop for the mind: a creative space where you collect, create and expand your personal knowledge, while also letting you constantly evolve the tools you use to do so.
 
@@ -37,31 +37,31 @@ SilverBullet...
 - SilverBullet is [open source, MIT licensed](https://github.com/silverbulletmd/silverbullet) software.
 
 
-**分发版本：** 0.9.2~ynh1
+**Поставляемая версия:** 0.9.2~ynh1
 
-**演示：** <https://play.silverbullet.md/>
+**Демо-версия:** <https://play.silverbullet.md/>
 
-## 截图
+## Снимки экрана
 
-![SilverBullet 的截图](./doc/screenshots/silverbullet.jpg)
+![Снимок экрана SilverBullet](./doc/screenshots/silverbullet.jpg)
 
-## 文档与资源
+## Документация и ресурсы
 
-- 官方应用网站： <https://silverbullet.md>
-- 上游应用代码库： <https://github.com/silverbulletmd/silverbullet>
-- YunoHost 商店： <https://apps.yunohost.org/app/silverbullet>
-- 报告 bug： <https://github.com/YunoHost-Apps/silverbullet_ynh/issues>
+- Официальный веб-сайт приложения: <https://silverbullet.md>
+- Репозиторий кода главной ветки приложения: <https://github.com/silverbulletmd/silverbullet>
+- Магазин YunoHost: <https://apps.yunohost.org/app/silverbullet>
+- Сообщите об ошибке: <https://github.com/YunoHost-Apps/silverbullet_ynh/issues>
 
-## 开发者信息
+## Информация для разработчиков
 
-请向 [`testing` 分支](https://github.com/YunoHost-Apps/silverbullet_ynh/tree/testing) 发送拉取请求。
+Пришлите Ваш запрос на слияние в [ветку `testing`](https://github.com/YunoHost-Apps/silverbullet_ynh/tree/testing).
 
-如要尝试 `testing` 分支，请这样操作：
+Чтобы попробовать ветку `testing`, пожалуйста, сделайте что-то вроде этого:
 
 ```bash
 sudo yunohost app install https://github.com/YunoHost-Apps/silverbullet_ynh/tree/testing --debug
-或
+или
 sudo yunohost app upgrade silverbullet -u https://github.com/YunoHost-Apps/silverbullet_ynh/tree/testing --debug
 ```
 
-**有关应用打包的更多信息：** <https://yunohost.org/packaging_apps>
+**Больше информации о пакетировании приложений:** <https://yunohost.org/packaging_apps>
