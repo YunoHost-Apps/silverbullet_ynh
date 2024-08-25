@@ -7,7 +7,7 @@ name = "SilverBullet"
 description.en = "a creative space where you collect, create and expand your personal knowledge"
 description.fr = "un espace créatif où vous recueillez, créez et élargissez vos connaissances personnelles"
 
-version = "0.9.2~ynh1"
+version = "0.9.2~ynh2"
 
 maintainers = ["fflorent"]
 
