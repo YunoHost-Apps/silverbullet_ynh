@@ -8,17 +8,12 @@ source _common.sh
 source /usr/share/yunohost/helpers
 
 #=================================================
-# INITIALIZE AND STORE SETTINGS
-#=================================================
-
-#=================================================
 # DOWNLOAD, CHECK AND UNPACK SOURCE
 #=================================================
 ynh_script_progression "Setting up source files..."
 
 ynh_setup_source --dest_dir="$install_dir"
 
-#REMOVEME? Assuming the install dir is setup using ynh_setup_source, the proper chmod/chowns are now already applied and it shouldn't be necessary to tweak perms | chown -R "$app:www-data" "$install_dir"
 #=================================================
 # APP INITIAL CONFIGURATION
 #=================================================
@@ -26,17 +21,15 @@ ynh_script_progression "Adding $app's configuration files..."
 
 ynh_config_add --template="default.env" --destination="$install_dir/default.env"
 
-#REMOVEME? Assuming the file is setup using ynh_config_add, the proper chmod/chowns are now already applied and it shouldn't be necessary to tweak perms | chmod 400 "$install_dir/default.env"
-#REMOVEME? Assuming the file is setup using ynh_config_add, the proper chmod/chowns are now already applied and it shouldn't be necessary to tweak perms | chown "$app:$app" "$install_dir/default.env"
-
 ynh_config_add --template="custom.env" --destination="$data_dir/custom.env"
 
-#REMOVEME? Assuming the file is setup using ynh_config_add, the proper chmod/chowns are now already applied and it shouldn't be necessary to tweak perms | chmod 600 "$data_dir/custom.env"
-#REMOVEME? Assuming the file is setup using ynh_config_add, the proper chmod/chowns are now already applied and it shouldn't be necessary to tweak perms | chown "$app:$app" "$data_dir/custom.env"
+chmod 600 "$data_dir/custom.env"
+chown "$app:$app" "$data_dir/custom.env"
 
 #=================================================
 # SET PERMISSION FOR THE USER
 #=================================================
+
 ynh_permission_update --permission="main" --add="$admin"
 
 #=================================================
