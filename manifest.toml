@@ -4,8 +4,8 @@ packaging_format = 2
 
 id = "silverbullet"
 name = "SilverBullet"
-description.en = "a creative space where you collect, create and expand your personal knowledge"
-description.fr = "un espace créatif où vous recueillez, créez et élargissez vos connaissances personnelles"
+description.en = "Creative space where you collect, create and expand your personal knowledge"
+description.fr = "Espace créatif où vous recueillez, créez et élargissez vos connaissances personnelles"
 
 version = "0.9.2~ynh2"
 
@@ -33,7 +33,6 @@ ram.runtime = "250M"
 
 [install]
     [install.domain]
-    # this is a generic question - ask strings are automatically handled by YunoHost's core
     type = "domain"
 
     [install.admin]
@@ -42,8 +41,6 @@ ram.runtime = "250M"
     type = "user"
 
 [resources]
-    # See the packaging documentation for the full set
-    # of explanation regarding the behavior and properties for each of those
 
     [resources.sources]
 
