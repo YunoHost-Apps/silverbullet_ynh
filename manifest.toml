@@ -35,10 +35,6 @@ ram.runtime = "250M"
     [install.domain]
     type = "domain"
 
-    [install.init_main_permission]
-    type = "group"
-    default = "visitors"
-
     [install.admin]
     help.en = "Choose the user who can access to silverbullet"
     help.fr = "Choisissez l'utilisateur pouvant accéder à silverbullet"
@@ -67,6 +63,7 @@ ram.runtime = "250M"
 
     [resources.permissions]
     main.url = "/"
+    main.allowed = "admins"
 
     [resources.ports]
     main.default = 3000
