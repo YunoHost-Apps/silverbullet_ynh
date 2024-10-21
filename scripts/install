@@ -27,12 +27,6 @@ chmod 600 "$data_dir/custom.env"
 chown "$app:$app" "$data_dir/custom.env"
 
 #=================================================
-# SET PERMISSION FOR THE USER
-#=================================================
-
-ynh_permission_update --permission="main" --add="$admin"
-
-#=================================================
 # SYSTEM CONFIGURATION
 #=================================================
 ynh_script_progression "Adding system configurations related to $app..."
