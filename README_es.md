@@ -37,7 +37,7 @@ SilverBullet...
 - SilverBullet is [open source, MIT licensed](https://github.com/silverbulletmd/silverbullet) software.
 
 
-**Versión actual:** 0.9.4~ynh1
+**Versión actual:** 0.9.4~ynh2
 
 **Demo:** <https://play.silverbullet.md/>
 
@@ -54,7 +54,7 @@ SilverBullet...
 
 ## Información para desarrolladores
 
-Por favor enviar sus correcciones a la [`branch testing`](https://github.com/YunoHost-Apps/silverbullet_ynh/tree/testing
+Por favor enviar sus correcciones a la [rama `testing`](https://github.com/YunoHost-Apps/silverbullet_ynh/tree/testing).
 
 Para probar la rama `testing`, sigue asÍ:
 
