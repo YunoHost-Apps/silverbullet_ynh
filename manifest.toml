@@ -4,8 +4,8 @@ packaging_format = 2
 
 id = "silverbullet"
 name = "SilverBullet"
-description.en = "a creative space where you collect, create and expand your personal knowledge"
-description.fr = "un espace créatif où vous recueillez, créez et élargissez vos connaissances personnelles"
+description.en = "Creative space where you collect, create and expand your personal knowledge"
+description.fr = "Espace créatif où vous recueillez, créez et élargissez vos connaissances personnelles"
 
 version = "0.9.4~ynh1"
 
@@ -18,7 +18,8 @@ demo = "https://play.silverbullet.md/"
 code = "https://github.com/silverbulletmd/silverbullet"
 
 [integration]
-yunohost = ">= 11.2"
+yunohost = ">= 11.2.30"
+helpers_version = "2.1"
 architectures = [ "amd64", "arm64" ]
 multi_instance = true
 
@@ -32,7 +33,6 @@ ram.runtime = "250M"
 
 [install]
     [install.domain]
-    # this is a generic question - ask strings are automatically handled by YunoHost's core
     type = "domain"
 
     [install.admin]
@@ -41,8 +41,6 @@ ram.runtime = "250M"
     type = "user"
 
 [resources]
-    # See the packaging documentation for the full set
-    # of explanation regarding the behavior and properties for each of those
 
     [resources.sources]
 
@@ -65,6 +63,7 @@ ram.runtime = "250M"
 
     [resources.permissions]
     main.url = "/"
+    main.allowed = "admins"
 
     [resources.ports]
     main.default = 3000
