@@ -5,7 +5,9 @@ EZ editatu eskuz.
 
 # SilverBullet YunoHost-erako
 
-[![Integrazio maila](https://dash.yunohost.org/integration/silverbullet.svg)](https://ci-apps.yunohost.org/ci/apps/silverbullet/) ![Funtzionamendu egoera](https://ci-apps.yunohost.org/ci/badges/silverbullet.status.svg) ![Mantentze egoera](https://ci-apps.yunohost.org/ci/badges/silverbullet.maintain.svg)
+[![Integrazio maila](https://apps.yunohost.org/badge/integration/silverbullet)](https://ci-apps.yunohost.org/ci/apps/silverbullet/)
+![Funtzionamendu egoera](https://apps.yunohost.org/badge/state/silverbullet)
+![Mantentze egoera](https://apps.yunohost.org/badge/maintained/silverbullet)
 
 [![Instalatu SilverBullet YunoHost-ekin](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=silverbullet)
 

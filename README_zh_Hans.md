@@ -5,7 +5,9 @@
 
 # YunoHost 上的 SilverBullet
 
-[![集成程度](https://dash.yunohost.org/integration/silverbullet.svg)](https://ci-apps.yunohost.org/ci/apps/silverbullet/) ![工作状态](https://ci-apps.yunohost.org/ci/badges/silverbullet.status.svg) ![维护状态](https://ci-apps.yunohost.org/ci/badges/silverbullet.maintain.svg)
+[![集成程度](https://apps.yunohost.org/badge/integration/silverbullet)](https://ci-apps.yunohost.org/ci/apps/silverbullet/)
+![工作状态](https://apps.yunohost.org/badge/state/silverbullet)
+![维护状态](https://apps.yunohost.org/badge/maintained/silverbullet)
 
 [![使用 YunoHost 安装 SilverBullet](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=silverbullet)
 

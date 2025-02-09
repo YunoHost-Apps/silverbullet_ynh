@@ -1,22 +1,22 @@
 <!--
-NB: Deze README is automatisch gegenereerd door <https://github.com/YunoHost/apps/tree/master/tools/readme_generator>
-Hij mag NIET handmatig aangepast worden.
+To README zostało automatycznie wygenerowane przez <https://github.com/YunoHost/apps/tree/master/tools/readme_generator>
+Nie powinno być ono edytowane ręcznie.
 -->
 
-# SilverBullet voor Yunohost
+# SilverBullet dla YunoHost
 
-[![Integratieniveau](https://apps.yunohost.org/badge/integration/silverbullet)](https://ci-apps.yunohost.org/ci/apps/silverbullet/)
-![Mate van functioneren](https://apps.yunohost.org/badge/state/silverbullet)
-![Onderhoudsstatus](https://apps.yunohost.org/badge/maintained/silverbullet)
+[![Poziom integracji](https://apps.yunohost.org/badge/integration/silverbullet)](https://ci-apps.yunohost.org/ci/apps/silverbullet/)
+![Status działania](https://apps.yunohost.org/badge/state/silverbullet)
+![Status utrzymania](https://apps.yunohost.org/badge/maintained/silverbullet)
 
-[![SilverBullet met Yunohost installeren](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=silverbullet)
+[![Zainstaluj SilverBullet z YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=silverbullet)
 
-*[Deze README in een andere taal lezen.](./ALL_README.md)*
+*[Przeczytaj plik README w innym języku.](./ALL_README.md)*
 
-> *Met dit pakket kun je SilverBullet snel en eenvoudig op een YunoHost-server installeren.*  
-> *Als je nog geen YunoHost hebt, lees dan [de installatiehandleiding](https://yunohost.org/install), om te zien hoe je 'm installeert.*
+> *Ta aplikacja pozwala na szybką i prostą instalację SilverBullet na serwerze YunoHost.*  
+> *Jeżeli nie masz YunoHost zapoznaj się z [poradnikiem](https://yunohost.org/install) instalacji.*
 
-## Overzicht
+## Przegląd
 
 SilverBullet aims to be your workshop for the mind: a creative space where you collect, create and expand your personal knowledge, while also letting you constantly evolve the tools you use to do so.
 
@@ -39,31 +39,31 @@ SilverBullet...
 - SilverBullet is [open source, MIT licensed](https://github.com/silverbulletmd/silverbullet) software.
 
 
-**Geleverde versie:** 0.10.1~ynh1
+**Dostarczona wersja:** 0.10.1~ynh1
 
 **Demo:** <https://play.silverbullet.md/>
 
-## Schermafdrukken
+## Zrzuty ekranu
 
-![Schermafdrukken van SilverBullet](./doc/screenshots/silverbullet.jpg)
+![Zrzut ekranu z SilverBullet](./doc/screenshots/silverbullet.jpg)
 
-## Documentatie en bronnen
+## Dokumentacja i zasoby
 
-- Officiele website van de app: <https://silverbullet.md>
-- Upstream app codedepot: <https://github.com/silverbulletmd/silverbullet>
-- YunoHost-store: <https://apps.yunohost.org/app/silverbullet>
-- Meld een bug: <https://github.com/YunoHost-Apps/silverbullet_ynh/issues>
+- Oficjalna strona aplikacji: <https://silverbullet.md>
+- Repozytorium z kodem źródłowym: <https://github.com/silverbulletmd/silverbullet>
+- Sklep YunoHost: <https://apps.yunohost.org/app/silverbullet>
+- Zgłaszanie błędów: <https://github.com/YunoHost-Apps/silverbullet_ynh/issues>
 
-## Ontwikkelaarsinformatie
+## Informacje od twórców
 
-Stuur je pull request alsjeblieft naar de [`testing`-branch](https://github.com/YunoHost-Apps/silverbullet_ynh/tree/testing).
+Wyślij swój pull request do [gałęzi `testing`](https://github.com/YunoHost-Apps/silverbullet_ynh/tree/testing).
 
-Om de `testing`-branch uit te proberen, ga als volgt te werk:
+Aby wypróbować gałąź `testing` postępuj zgodnie z instrukcjami:
 
 ```bash
 sudo yunohost app install https://github.com/YunoHost-Apps/silverbullet_ynh/tree/testing --debug
-of
+lub
 sudo yunohost app upgrade silverbullet -u https://github.com/YunoHost-Apps/silverbullet_ynh/tree/testing --debug
 ```
 
-**Verdere informatie over app-packaging:** <https://yunohost.org/packaging_apps>
+**Więcej informacji o tworzeniu paczek aplikacji:** <https://yunohost.org/packaging_apps>
