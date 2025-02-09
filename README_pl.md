@@ -39,7 +39,7 @@ SilverBullet...
 - SilverBullet is [open source, MIT licensed](https://github.com/silverbulletmd/silverbullet) software.
 
 
-**Dostarczona wersja:** 0.10.1~ynh1
+**Dostarczona wersja:** 0.10.1~ynh2
 
 **Demo:** <https://play.silverbullet.md/>
 
