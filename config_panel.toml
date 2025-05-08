@@ -1,0 +1,16 @@
+version = "1.0"
+
+[tools]
+services = ["__APP__"]
+  name.en = "Tools"
+  name.fr = "Outils"
+  [tools.notes_fixes]
+    name.en = "Fixes for notes"
+    name.fr = "Corrections pour les notes"
+    
+    [tools.notes_fixes.v1_domain]
+      type = "button"
+      ask.en = "Fix the domain in notes"
+      ask.fr = "Corriger le domaine dans les notes"
+      help.fr = "Modifie le domaine du site de Silverbullet dans le contenu de vos notes, pour corriger les inclusions vers le site ([ticket Github](https://github.com/YunoHost-Apps/silverbullet_ynh/issues/33)). Une sauvegarde de l'application sera faite au préalable"
+      help.en = "Change the Silverbullet website domain in your notes, so it fixes the website embeddings ([Github issue](https://github.com/YunoHost-Apps/silverbullet_ynh/issues/33)). A backup will be made beforehand."
