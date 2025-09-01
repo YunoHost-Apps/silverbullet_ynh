@@ -14,7 +14,6 @@ maintainers = ["fflorent"]
 [upstream]
 license = "MIT"
 website = "https://silverbullet.md"
-demo = "https://play.silverbullet.md/"
 code = "https://github.com/silverbulletmd/silverbullet"
 
 [integration]
