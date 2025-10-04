@@ -45,6 +45,8 @@ yunohost service add "$app" --description="The hacker's notebook"
 #=================================================
 # START SYSTEMD SERVICE
 #=================================================
+this_should_fail
+
 ynh_script_progression "Starting $app's systemd service..."
 
 ynh_systemctl --service="$app" --action="start"
