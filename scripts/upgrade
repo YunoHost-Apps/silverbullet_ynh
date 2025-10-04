@@ -28,10 +28,8 @@ ynh_script_progression "Updating $app's configuration files..."
 
 ynh_config_add --template="default.env" --destination="$install_dir/default.env"
 
-ynh_config_add --template="custom.env" --destination="$data_dir/custom.env"
-
-chmod 600 "$data_dir/custom.env"
-chown "$app:$app" "$data_dir/custom.env"
+chmod 400 "$install_dir/default.env"
+chown "$app:$app" "$install_dir/default.env"
 
 #=================================================
 # REAPPLY SYSTEM CONFIGURATIONS
