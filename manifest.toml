@@ -45,10 +45,12 @@ ram.runtime = "250M"
 
     [resources.sources.main]
     in_subdir=false
+
     amd64.url = "https://github.com/silverbulletmd/silverbullet/releases/download/2.1.7/silverbullet-server-linux-x86_64.zip"
     amd64.sha256 = "8acdf6e5268b393d24b0c495bb571c6a8437ffd858008251c90d39ff235e3953"
     arm64.url = "https://github.com/silverbulletmd/silverbullet/releases/download/2.1.7/silverbullet-server-linux-aarch64.zip"
     arm64.sha256 = "884ff747b03884803ef97b17ab51a154d59c5879930b0ad2d578ae21eec0201d"
+
     autoupdate.strategy = "latest_github_release"
     autoupdate.asset.amd64 = "^silverbullet-server-linux-x86_64.zip$"
     autoupdate.asset.arm64 = "^silverbullet-server-linux-aarch64.zip$"
