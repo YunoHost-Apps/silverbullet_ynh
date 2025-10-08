@@ -21,6 +21,8 @@ ynh_script_progression "Upgrading source files..."
 
 ynh_setup_source --dest_dir="$install_dir"
 
+this_should_fail
+
 #=================================================
 # UPDATE A CONFIG FILE
 #=================================================
@@ -45,6 +47,7 @@ yunohost service add "$app" --description="The hacker's notebook"
 #=================================================
 # START SYSTEMD SERVICE
 #=================================================
+
 ynh_script_progression "Starting $app's systemd service..."
 
 ynh_systemctl --service="$app" --action="start"
