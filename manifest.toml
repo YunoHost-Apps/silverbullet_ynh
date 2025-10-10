@@ -7,11 +7,7 @@ name = "SilverBullet"
 description.en = "Creative space where you collect, create and expand your personal knowledge"
 description.fr = "Espace créatif où vous recueillez, créez et élargissez vos connaissances personnelles"
 
-<<<<<<< HEAD
-version = "2.1.6~ynh1"
-=======
 version = "2.1.9~ynh1"
->>>>>>> 4ca6c6f (Upgrade sources)
 
 maintainers = ["fflorent"]
 
