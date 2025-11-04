@@ -17,3 +17,7 @@ SilverBullet...
 - Mécanisme d'extension robuste utilisant des plugs.
 - **Auto-hébergé** : vous êtes propriétaire de vos données. Tout le contenu est stocké sous forme de fichiers simples dans un dossier sur le disque. Sauvegardez, synchronisez, éditez, publiez, écrivez avec tous les outils supplémentaires que vous souhaitez.
 - SilverBullet est [open-source, sous licence MIT](https://github.com/silverbulletmd/silverbullet)
+
+# Limitations
+
+- Ce paquet ne supporte pas [le chiffrement côté navigateur](https://silverbullet.md/Client%20Encryption), car le méchanisme d'authentification s'appuie sur le [SSO de Yunohost](https://doc.yunohost.org/fr/admin/users/)

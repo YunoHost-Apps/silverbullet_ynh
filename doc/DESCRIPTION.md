@@ -17,3 +17,7 @@ SilverBullet...
 - Robust extension mechanism using plugs.
 - **Self-hosted**: you own your data. All content is stored as plain files in a folder on disk. Back up, sync, edit, publish, script with any additional tools you like.
 - SilverBullet is [open source, MIT licensed](https://github.com/silverbulletmd/silverbullet) software.
+
+# Limitations
+
+- This package does not support [Client-Side encryption](https://silverbullet.md/Client%20Encryption) as the authentification relies [on the Yunohost SSO](https://doc.yunohost.org/en/admin/users/).
