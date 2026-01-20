@@ -23,7 +23,6 @@ architectures = [ "amd64", "arm64" ]
 multi_instance = true
 
 ldap = false
-
 sso = false
 
 disk = "100M"
@@ -67,4 +66,3 @@ ram.runtime = "250M"
     main.allowed = "admins"
 
     [resources.ports]
-    main.default = 3000
