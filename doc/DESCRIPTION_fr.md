@@ -4,8 +4,6 @@ Bien que vous puissiez utiliser SilverBullet comme une simple application de pri
 
 # Fonctionnalités
 
-SilverBullet...
-
 - Fonctionne dans n'importe quel navigateur moderne (y compris sur mobile) en tant que PWA dans deux modes client (_online_ et _synced_ mode), où le _synced mode_ permet un fonctionnement **100% hors ligne**, conservant une copie du contenu dans le navigateur, se synchronisant à nouveau avec le serveur lorsqu'une connexion réseau est disponible.
 - Fournit une expérience d'écriture markdown agréable avec une interface utilisateur propre, rendant le texte en utilisant Live Preview, **réduisant encore le bruit visuel** tout en fournissant un accès direct à la syntaxe markdown sous-jacente.
 - Supporte les **liens de page** de type wiki en utilisant la syntaxe `[[page link]]`. Les liens entrants sont indexés et apparaissent en tant que "Linked Mentions" au bas des pages liées, ce qui permet de créer des liens bidirectionnels.
