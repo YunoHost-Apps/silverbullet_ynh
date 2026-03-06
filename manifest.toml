@@ -66,3 +66,4 @@ ram.runtime = "250M"
     main.allowed = "admins"
 
     [resources.ports]
+    main.default = 3000
