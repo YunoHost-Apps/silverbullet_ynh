@@ -15,6 +15,7 @@ maintainers = ["fflorent"]
 license = "MIT"
 website = "https://silverbullet.md"
 code = "https://github.com/silverbulletmd/silverbullet"
+fund = "https://silverbullet.md/Funding"
 
 [integration]
 yunohost = ">= 12.1.38"
