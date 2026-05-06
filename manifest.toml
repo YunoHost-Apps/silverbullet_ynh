@@ -7,7 +7,7 @@ name = "SilverBullet"
 description.en = "Creative space where you collect, create and expand your personal knowledge"
 description.fr = "Espace créatif où vous recueillez, créez et élargissez vos connaissances personnelles"
 
-version = "2.6.1~ynh1"
+version = "2.7.0~ynh1"
 
 maintainers = ["fflorent"]
 
@@ -46,10 +46,10 @@ ram.runtime = "250M"
     [resources.sources.main]
     in_subdir=false
 
-    amd64.url = "https://github.com/silverbulletmd/silverbullet/releases/download/2.6.1/silverbullet-server-linux-x86_64.zip"
-    amd64.sha256 = "74b8bc47dad51694ff2450a823af453e5750db5a12de02f60d32802b90f131d7"
-    arm64.url = "https://github.com/silverbulletmd/silverbullet/releases/download/2.6.1/silverbullet-server-linux-aarch64.zip"
-    arm64.sha256 = "05a9e8740957a5d253888b7b1d975c308738165946bc5d098e3f50ccae26f161"
+    amd64.url = "https://github.com/silverbulletmd/silverbullet/releases/download/2.7.0/silverbullet-server-linux-x86_64.zip"
+    amd64.sha256 = "f1b4ae03f0ee05a8fe495abe157f5edaa1f27b845e83b15e6c8c8bc8b06f0faa"
+    arm64.url = "https://github.com/silverbulletmd/silverbullet/releases/download/2.7.0/silverbullet-server-linux-aarch64.zip"
+    arm64.sha256 = "efab3be2061e719b519059b422ceede1684090e1d6267166ff76f3fd91b42164"
 
     autoupdate.strategy = "latest_github_release"
     autoupdate.asset.amd64 = "^silverbullet-server-linux-x86_64.zip$"
