@@ -4,6 +4,7 @@
 # IMPORT GENERIC HELPERS
 #=================================================
 
+source "$(dirname "$0")/_common.sh"
 source /usr/share/yunohost/helpers
 
 #=================================================
@@ -29,6 +30,29 @@ ynh_config_add --template="default.env" --destination="$install_dir/default.env"
 
 chmod 400 "$install_dir/default.env"
 chown "$app:$app" "$install_dir/default.env"
+
+#=================================================
+# MCP SIDECAR (OPTIONAL)
+#=================================================
+# Older installs predate these settings - default to disabled.
+if ! ynh_app_setting_get --key=enable_mcp >/dev/null 2>&1; then
+    ynh_app_setting_set --key=enable_mcp --value="0"
+fi
+if ! ynh_app_setting_get --key=mcp_token >/dev/null 2>&1; then
+    ynh_app_setting_set --key=mcp_token --value=""
+fi
+if ! ynh_app_setting_get --key=sb_api_token >/dev/null 2>&1; then
+    ynh_app_setting_set --key=sb_api_token --value=""
+fi
+
+_mcp_write_env
+
+if [ "$(ynh_app_setting_get --key=enable_mcp)" = "1" ]; then
+    ynh_script_progression "Updating the MCP sidecar..."
+    mcp_setup
+elif [ -f "/etc/systemd/system/$app-mcp.service" ]; then
+    mcp_remove
+fi
 
 #=================================================
 # REAPPLY SYSTEM CONFIGURATIONS

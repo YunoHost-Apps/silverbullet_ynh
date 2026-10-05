@@ -4,6 +4,7 @@
 # IMPORT GENERIC HELPERS
 #=================================================
 
+source "$(dirname "$0")/_common.sh"
 source /usr/share/yunohost/helpers
 
 #=================================================
@@ -24,6 +25,26 @@ ynh_config_add --template="custom.env" --destination="$data_dir/custom.env"
 
 chmod 600 "$data_dir/custom.env"
 chown "$app:$app" "$data_dir/custom.env"
+
+#=================================================
+# MCP SIDECAR (OPTIONAL)
+#=================================================
+# The dashboard API token (sb_api_token) cannot exist yet at install time:
+# it is created by the admin in /.dashboard afterwards and pasted in the
+# app config panel. The bridge runs without it but cannot read the space.
+ynh_app_setting_set --key=enable_mcp --value="${enable_mcp:-0}"
+ynh_app_setting_set --key=sb_api_token --value=""
+ynh_app_setting_set --key=mcp_token --value=""
+
+_mcp_write_env
+
+if [ "${enable_mcp:-0}" = "1" ]; then
+    ynh_script_progression "Setting up the MCP sidecar..."
+    mcp_setup
+    ynh_print_info "MCP sidecar enabled. Create a SilverBullet API token in /.dashboard (user -> API tokens) and paste it in the app config panel."
+else
+    ynh_print_info "MCP sidecar disabled - skipping (can be enabled later in the app config panel)."
+fi
 
 #=================================================
 # SYSTEM CONFIGURATION

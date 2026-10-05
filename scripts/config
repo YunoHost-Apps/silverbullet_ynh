@@ -1,0 +1,64 @@
+#!/bin/bash
+
+source "$(dirname "$0")/_common.sh"
+source /usr/share/yunohost/helpers
+
+#=================================================
+# MCP SIDECAR TOGGLE
+#=================================================
+
+get__enable_mcp() {
+    local value
+    value="$(ynh_app_setting_get --key=enable_mcp 2>/dev/null || true)"
+    echo "${value:-0}"
+}
+
+set__enable_mcp() {
+    if [ "$enable_mcp" = "1" ]; then
+        ynh_print_info "Setting up the MCP sidecar (download + build, may take a few minutes)..."
+        mcp_setup
+    else
+        mcp_remove
+    fi
+    ynh_app_setting_set --key=enable_mcp --value="$enable_mcp"
+}
+
+#=================================================
+# MCP TOKENS (bridge restarts to pick them up)
+#=================================================
+
+get__sb_api_token() {
+    ynh_app_setting_get --key=sb_api_token 2>/dev/null || true
+}
+
+set__sb_api_token() {
+    ynh_app_setting_set --key=sb_api_token --value="$sb_api_token"
+    _mcp_write_env
+    if [ -f "/etc/systemd/system/$app-mcp.service" ]; then
+        ynh_systemctl --service="$app-mcp" --action="restart"
+    fi
+}
+
+get__mcp_token() {
+    ynh_app_setting_get --key=mcp_token 2>/dev/null || true
+}
+
+set__mcp_token() {
+    local token="$mcp_token"
+    if [ -z "$token" ]; then
+        token="$(openssl rand -hex 24)"
+    fi
+    ynh_app_setting_set --key=mcp_token --value="$token"
+    _mcp_write_env
+    if [ -f "/etc/systemd/system/$app-mcp.service" ]; then
+        ynh_systemctl --service="$app-mcp" --action="restart"
+    fi
+}
+
+#=================================================
+
+ynh_app_config_apply() {
+    _ynh_app_config_apply
+}
+
+ynh_app_config_run $1

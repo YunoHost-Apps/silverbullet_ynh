@@ -1,0 +1,36 @@
+version = "1.0"
+
+[main]
+name.en = "SilverBullet configuration"
+name.fr = "Configuration de SilverBullet"
+
+    [main.mcp]
+    name.en = "MCP sidecar"
+    name.fr = "Sidecar MCP"
+
+        [main.mcp.enable_mcp]
+        ask.en = "Enable the MCP sidecar"
+        ask.fr = "Activer le sidecar MCP"
+        help.en = "Exposes notes to LLMs via /mcp. Enabling downloads and builds the bridge (a few minutes). A SilverBullet API token is required below."
+        help.fr = "Expose les notes aux LLM via /mcp. L'activation télécharge et compile le pont (quelques minutes). Un token API SilverBullet est requis ci-dessous."
+        type = "boolean"
+        default = 0
+        bind = "null"
+
+        [main.mcp.sb_api_token]
+        ask.en = "SilverBullet API token (for the bridge)"
+        ask.fr = "Token API SilverBullet (pour le pont)"
+        help.en = "Create it in /.dashboard -> your user -> API tokens, then paste it here. The bridge restarts automatically."
+        help.fr = "Créez-le dans /.dashboard -> votre utilisateur -> API tokens, puis collez-le ici. Le pont redémarre automatiquement."
+        type = "password"
+        optional = true
+        bind = "null"
+
+        [main.mcp.mcp_token]
+        ask.en = "Token required by MCP clients (Authorization: Bearer)"
+        ask.fr = "Token exigé par les clients MCP (Authorization: Bearer)"
+        help.en = "Rotate it here. The bridge restarts automatically."
+        help.fr = "Modifiez-le ici pour le changer. Le pont redémarre automatiquement."
+        type = "password"
+        optional = true
+        bind = "null"

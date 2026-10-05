@@ -7,7 +7,7 @@ name = "SilverBullet"
 description.en = "Creative space where you collect, create and expand your personal knowledge"
 description.fr = "Espace créatif où vous recueillez, créez et élargissez vos connaissances personnelles"
 
-version = "2.11.1~ynh1"
+version = "2.11.1~ynh2"
 
 maintainers = ["fflorent"]
 
@@ -26,9 +26,9 @@ multi_instance = true
 ldap = false
 sso = false
 
-disk = "100M"
-ram.build = "50M"
-ram.runtime = "250M"
+disk = "500M"
+ram.build = "512M"
+ram.runtime = "350M"
 
 [install]
     [install.domain]
@@ -38,6 +38,22 @@ ram.runtime = "250M"
     help.en = "Choose the user who can access to silverbullet"
     help.fr = "Choisissez l'utilisateur pouvant accéder à silverbullet"
     type = "user"
+
+    [install.enable_mcp]
+    ask.en = "Enable the MCP sidecar (expose notes to LLMs via /mcp)?"
+    ask.fr = "Activer le sidecar MCP (exposer les notes aux LLM via /mcp) ?"
+    help.en = "Installs a small Node.js bridge exposing the SilverBullet HTTP API as a Model Context Protocol server. No Chromium needed. A SilverBullet API token (created in /.dashboard) must be pasted in the app config panel afterwards. Can be toggled later in the config panel."
+    help.fr = "Installe un petit pont Node.js exposant l'API HTTP SilverBullet comme serveur Model Context Protocol. Sans Chromium. Un token API SilverBullet (créé dans /.dashboard) devra être collé dans le panneau de configuration ensuite. Modifiable plus tard dans le panneau de configuration."
+    type = "boolean"
+    default = 0
+    yes = 1
+    no = 0
+
+    [install.init_mcp_permission]
+    help.en = "Who can reach the MCP endpoint (/mcp)? A client token is still required."
+    help.fr = "Qui peut joindre le point d'accès MCP (/mcp) ? Un token client reste requis."
+    type = "group"
+    default = "admins"
 
 [resources]
 
@@ -55,6 +71,15 @@ ram.runtime = "250M"
     autoupdate.asset.amd64 = "^silverbullet-server-linux-x86_64.zip$"
     autoupdate.asset.arm64 = "^silverbullet-server-linux-aarch64.zip$"
 
+    [resources.sources.mcp]
+    url = "https://github.com/Ahmad-A0/silverbullet-mcp/archive/refs/tags/v1.2.0.tar.gz"
+    sha256 = "90b28bb091667fd66acda7a91dfdef2cf9a2a57dfbcc16fba4840338a94f45ea"
+    in_subdir = true
+    autoupdate.strategy = "latest_github_tag"
+
+    [resources.nodejs]
+    version = "22"
+
     [resources.system_user]
 
     [resources.install_dir]
@@ -65,6 +90,11 @@ ram.runtime = "250M"
     [resources.permissions]
     main.url = "/"
     main.allowed = "admins"
+    mcp.url = "/mcp"
+    mcp.auth_header = false
+    mcp.show_tile = false
+    mcp.allowed = "admins"
 
     [resources.ports]
     main.default = 3000
+    mcp.default = 4000

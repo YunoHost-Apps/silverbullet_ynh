@@ -34,6 +34,19 @@ systemctl enable "$app.service" --quiet
 yunohost service add "$app" --description="The hacker's notebook"
 
 #=================================================
+# RESTORE THE MCP SIDECAR
+#=================================================
+if [ "$(ynh_app_setting_get --key=enable_mcp 2>/dev/null || echo 0)" = "1" ]; then
+    ynh_script_progression "Restoring the MCP sidecar..."
+    ynh_config_add_systemd --service="$app-mcp" --template="mcp.service"
+    systemctl enable "$app-mcp" --quiet
+    if ! ynh_hide_warnings yunohost service status "$app-mcp" >/dev/null 2>&1; then
+        yunohost service add "$app-mcp" --description="SilverBullet MCP bridge"
+    fi
+    ynh_systemctl --service="$app-mcp" --action="start"
+fi
+
+#=================================================
 # RELOAD NGINX AND PHP-FPM OR THE APP SERVICE
 #=================================================
 ynh_script_progression "Reloading NGINX web server and $app's service..."
