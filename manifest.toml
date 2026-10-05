@@ -7,7 +7,7 @@ name = "SilverBullet"
 description.en = "Creative space where you collect, create and expand your personal knowledge"
 description.fr = "Espace créatif où vous recueillez, créez et élargissez vos connaissances personnelles"
 
-version = "2.11.1~ynh1"
+version = "2.11.1~ynh2"
 
 maintainers = ["fflorent"]
 
@@ -34,10 +34,23 @@ ram.runtime = "250M"
     [install.domain]
     type = "domain"
 
+    [install.init_main_permission]
+    help.en = "Who can reach SilverBullet? (SilverBullet always asks for its own login)"
+    help.fr = "Qui peut accéder à SilverBullet ? (SilverBullet demande toujours sa propre connexion)"
+    type = "group"
+    default = "admins"
+
     [install.admin]
-    help.en = "Choose the user who can access to silverbullet"
-    help.fr = "Choisissez l'utilisateur pouvant accéder à silverbullet"
+    help.en = "Choose the user who will own the SilverBullet space"
+    help.fr = "Choisissez l'utilisateur propriétaire de l'espace SilverBullet"
     type = "user"
+
+    [install.admin_pw]
+    ask.en = "Choose a password for this SilverBullet admin user"
+    ask.fr = "Choisissez un mot de passe pour cet utilisateur administrateur SilverBullet"
+    help.en = "This password is only used to create the SilverBullet account. It is stored as a hash in the app data folder and is not the YunoHost account password."
+    help.fr = "Ce mot de passe sert uniquement à créer le compte SilverBullet. Il est stocké sous forme de hash dans les données de l'application et n'est pas le mot de passe du compte YunoHost."
+    type = "password"
 
 [resources]
 
@@ -64,7 +77,7 @@ ram.runtime = "250M"
 
     [resources.permissions]
     main.url = "/"
-    main.allowed = "admins"
+    main.auth_header = false
 
     [resources.ports]
     main.default = 3000
