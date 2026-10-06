@@ -33,13 +33,10 @@ chown "$app:$app" "$install_dir/default.env"
 #=================================================
 # CHECK THE SPACE IS CONFIGURED
 #=================================================
-# Admin passwords are never persisted in the app settings (YunoHost re-injects
-# them at install time only), so `silverbullet setup` cannot be re-run here.
-# Instead we just tell the user what state the instance is in.
+# $admin_pw exists at install time only, so setup cannot be re-run here.
 if [ ! -e "$data_dir/notes/spaces.json" ]; then
-    ynh_print_warn "This SilverBullet instance has never been configured: no spaces.json in $data_dir/notes."
-    ynh_print_warn "It will start on the setup wizard. Open https://$domain$path_url/.setup/ to create the admin account and the first space."
-    ynh_print_warn "See doc/POST_UPGRADE.d/2.11.1~ynh1.md if SB_USER / SB_AUTH_TOKEN in $data_dir/custom.env prevent the service from starting."
+    ynh_print_warn "This SilverBullet instance has never been configured: no spaces.json in $data_dir/notes. It will start on the setup wizard at https://$domain$path_url/.setup/."
+    ynh_print_warn "See doc/POST_UPGRADE.d/2.11.1~ynh2.md if SB_USER / SB_AUTH_TOKEN in $data_dir/custom.env prevent the service from starting."
 fi
 
 #=================================================
