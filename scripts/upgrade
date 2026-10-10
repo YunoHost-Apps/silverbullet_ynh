@@ -31,6 +31,15 @@ chmod 400 "$install_dir/default.env"
 chown "$app:$app" "$install_dir/default.env"
 
 #=================================================
+# CHECK THE SPACE IS CONFIGURED
+#=================================================
+# $admin_pw exists at install time only, so setup cannot be re-run here.
+if [ ! -e "$data_dir/notes/spaces.json" ]; then
+    ynh_print_warn "This SilverBullet instance has never been configured: no spaces.json in $data_dir/notes. It will start on the setup wizard at https://$domain$path_url/.setup/."
+    ynh_print_warn "See doc/POST_UPGRADE.d/2.11.1~ynh2.md if SB_USER / SB_AUTH_TOKEN in $data_dir/custom.env prevent the service from starting."
+fi
+
+#=================================================
 # REAPPLY SYSTEM CONFIGURATIONS
 #=================================================
 ynh_script_progression "Upgrading system configurations related to $app..."

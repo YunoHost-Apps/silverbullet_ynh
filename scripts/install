@@ -26,6 +26,32 @@ chmod 600 "$data_dir/custom.env"
 chown "$app:$app" "$data_dir/custom.env"
 
 #=================================================
+# INITIALISE THE SPACE
+#=================================================
+# Required since 2.11. Creates admin account and first space.
+# Exit 1 with spaces.json present means already configured, not an error.
+ynh_script_progression "Setting up the initial SilverBullet space..."
+
+# Keep file ownership on $app.
+mkdir -p "$data_dir/notes"
+chown "$app:$app" "$data_dir/notes"
+
+setup_rc=0
+setup_output="$(sudo -u "$app" "$install_dir/silverbullet" setup "$data_dir/notes" \
+    --admin "$admin:$admin_pw" --space "Notes" 2>&1)" || setup_rc=$?
+
+chown -R "$app:$app" "$data_dir"
+
+if [ "$setup_rc" -eq 0 ]; then
+    ynh_print_info "SilverBullet admin '$admin' created and first space initialised."
+elif [ -e "$data_dir/notes/spaces.json" ]; then
+    ynh_print_info "Already configured, nothing changed."
+else
+    ynh_print_warn "Setup failed: $setup_output"
+    ynh_print_warn "Setup wizard at https://$domain$path_url/.setup/"
+fi
+
+#=================================================
 # SYSTEM CONFIGURATION
 #=================================================
 ynh_script_progression "Adding system configurations related to $app..."
